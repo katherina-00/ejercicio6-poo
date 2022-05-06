@@ -47,6 +47,6 @@ class ManejadorViajeros:
         for i, ViajeroFrecuente in enumerate (self.__ListaViajeros):
             if i == v-1:
                 if b<=ViajeroFrecuente.getMillas():
-                    objeto = ViajeroFrecuente.getMillas() - b
-                    print("La cantidad de millas restantes son: {}".format(objeto))
+                    objeto = ViajeroFrecuente - b
+                    print("La cantidad de millas restantes son: {}".format(objeto.getMillas())
                 else: print("La cantidad de millas a canjear excede la cantidad existente")
