@@ -27,7 +27,7 @@ class ManejadorViajeros:
     def mayorMillas(self):
         max=None
         for num, ViajeroFrecuente in enumerate (self.__ListaViajeros):
-            if (max is None or ViajeroFrecuente.getMillas() > max):
+            if (max is None or ViajeroFrecuente > max):
                 max = ViajeroFrecuente.getMillas()
         for num, ViajeroFrecuente in enumerate (self.__ListaViajeros):
             if (ViajeroFrecuente.getMillas() == max):
@@ -38,9 +38,8 @@ class ManejadorViajeros:
         b=int(input("Indique la cantidad de millas que desea acumular: "))
         for i, ViajeroFrecuente in enumerate (self.__ListaViajeros):
             if i == v-1:
-                a = ViajeroFrecuente.getMillas()
-                a = a+b
-                print("La cantidad de millas es: {} ".format(a))
+                objeto = ViajeroFrecuente + b
+                print("La cantidad de millas es: {} ".format(objeto.getMillas())
 
     def canjearMillas(self):
         v=int(input("Indique el numero de viajero al que desea canjear millas: "))
